@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barbie Nails 💅🏻</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --pink:#f3a9c5;--pink-dark:#c95f8a;--pink-light:#ffe1ec;--pink-pale:#fff1f6;
+ --ivory:#fffaf0;--cream:#fff6e9;--text:#684653;--muted:#9b7782;
+ --white:#fff;--shadow:0 18px 45px rgba(155,82,111,.13);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:linear-gradient(135deg,var(--ivory),#fff0f5);color:var(--text);font-family:"Baloo 2",sans-serif}
+header{position:sticky;top:0;z-index:20;background:rgba(255,250,240,.9);backdrop-filter:blur(14px);border-bottom:1px solid #f5dce5;padding:15px 6%;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:28px;font-weight:800;color:var(--pink-dark)}.logo span{color:var(--text)}
+nav{display:flex;gap:22px}nav a{text-decoration:none;color:var(--text);font-weight:700}
+nav a:hover{color:var(--pink-dark)}
+.hero{width:min(1100px,92%);margin:auto;text-align:center;padding:75px 0 55px}
+.hero .tag{display:inline-block;padding:8px 16px;background:#fff;border:2px solid var(--pink-light);border-radius:99px;font-weight:700}
+.hero h1{font-family:"Playfair Display",serif;font-size:clamp(50px,9vw,92px);margin:18px 0 5px;color:var(--pink-dark);line-height:1}
+.hero h1 span{color:#805463}
+.hero p{max-width:650px;margin:18px auto;color:var(--muted);font-size:19px}
+.btn{display:inline-block;border:0;background:var(--pink-dark);color:white;text-decoration:none;padding:12px 22px;border-radius:16px;font-weight:800;cursor:pointer;box-shadow:0 8px 18px #c95f8a30}
+section{width:min(1100px,92%);margin:0 auto 70px}
+.section-title{text-align:center;margin-bottom:25px}.section-title h2{font-family:"Playfair Display",serif;font-size:38px;margin:0}.section-title p{color:var(--muted);margin:4px 0}
+.filters{display:flex;justify-content:center;flex-wrap:wrap;gap:9px;margin-bottom:25px}
+.filter{border:2px solid var(--pink-light);background:#fff8fb;color:var(--text);padding:8px 15px;border-radius:99px;cursor:pointer;font-weight:700}
+.filter.active,.filter:hover{background:var(--pink);color:white;border-color:var(--pink)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:rgba(255,255,255,.82);border:1px solid #f6dce5;border-radius:25px;overflow:hidden;box-shadow:var(--shadow);transition:.25s}
+.card:hover{transform:translateY(-6px)}
+.art{height:220px;display:flex;align-items:center;justify-content:center;position:relative;background:linear-gradient(145deg,#fffaf0,#ffe8f1)}
+.hand{display:flex;align-items:flex-end;gap:7px;transform:rotate(-3deg)}
+.nail{width:32px;height:93px;border-radius:17px 17px 12px 12px;border:2px solid #c98b9d;position:relative;box-shadow:inset 4px 5px 7px #fff8}
+.nail:nth-child(1),.nail:nth-child(5){height:78px}.nail:nth-child(2),.nail:nth-child(4){height:98px}.nail:nth-child(3){height:110px}
+.design-heart:after{content:"♥";position:absolute;inset:0;display:grid;place-items:center;color:#fff;font-size:22px}
+.design-french{background:linear-gradient(to bottom,#fff 0 70%,#f29fbe 70%)}
+.design-glitter{background:radial-gradient(circle at 25% 20%,#fff 0 3px,transparent 4px),radial-gradient(circle at 70% 45%,#fff 0 2px,transparent 3px),linear-gradient(145deg,#f7b7d0,#d982aa);background-size:28px 28px,35px 35px,auto}
+.design-cherry{background:#fff0f4}.design-cherry:after{content:"🍒";position:absolute;inset:0;display:grid;place-items:center;font-size:22px}
+.design-flower:after{content:"🌸";position:absolute;inset:0;display:grid;place-items:center;font-size:22px}
+.design-star{background:linear-gradient(145deg,#ead8ff,#fff0f7)}.design-star:after{content:"✦";position:absolute;inset:0;display:grid;place-items:center;color:#b071d0;font-size:27px}
+.design-bow{background:#ffe8f2}.design-bow:after{content:"🎀";position:absolute;inset:0;display:grid;place-items:center;font-size:21px}
+.design-y2k{background:linear-gradient(135deg,#f7c0ff,#89dfff,#ffafd4)}.design-y2k:after{content:"✧";position:absolute;inset:0;display:grid;place-items:center;color:#fff;font-size:30px}
+.design-cow{background:radial-gradient(ellipse at 30% 30%,#795d64 0 12%,transparent 13%),radial-gradient(ellipse at 70% 60%,#795d64 0 15%,transparent 16%),#fff}
+.design-coquette{background:#fff4f0}.design-coquette:after{content:"♡";position:absolute;inset:0;display:grid;place-items:center;color:#d46b91;font-size:35px}
+.design-ocean{background:linear-gradient(#a7e3ef,#73bfd9)}.design-ocean:after{content:"🐚";position:absolute;inset:0;display:grid;place-items:center;font-size:23px}
+.design-marble{background:repeating-linear-gradient(125deg,#fff 0 14px,#f2dbe5 15px 18px,#fff 19px 31px)}
+.card-body{padding:16px 18px}.card-body h3{margin:0;font-size:21px}.card-body p{margin:3px 0;color:var(--muted)}
+.rating{color:#d77b9b;font-weight:800}
+.creator{background:#fff;border:1px solid var(--pink-light);border-radius:30px;padding:28px;box-shadow:var(--shadow)}
+.creator-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+.control label{display:block;font-weight:800;margin-bottom:7px}.control{margin-bottom:15px}
+select{width:100%;padding:12px;border:2px solid #f3d2de;border-radius:14px;background:#fffafc;color:var(--text)}
+.preview{min-height:320px;background:linear-gradient(145deg,#fffaf0,#ffe5ef);border-radius:22px;display:flex;align-items:center;justify-content:center}
+.info{text-align:center;margin-top:13px;font-weight:700;color:var(--pink-dark)}
+footer{text-align:center;padding:30px;color:#a47d89;border-top:1px solid #f2dce5}
+@media(max-width:780px){nav{display:none}.grid{grid-template-columns:1fr 1fr}.creator-grid{grid-template-columns:1fr}}
+@media(max-width:520px){.grid{grid-template-columns:1fr}.hero{padding-top:50px}.art{height:210px}}
+</style>
+</head>
+<body>
+<header>
+ <div class="logo">💅🏻 <span>Barbie</span> Nails</div>
+ <nav><a href="#gallery">Gallery</a><a href="#creator">Nail Creator</a><a href="#about">About</a></nav>
+</header>
+
+<main>
+<section class="hero">
+ <div class="tag">🎀 Welcome to Barbie Nail Studio</div>
+ <h1>Barbie <span>Nails</span></h1>
+ <p>Temukan inspirasi nail art yang cute, elegant, dreamy, dan super Barbie. Pilih desain favoritmu dan buat kombinasi versimu sendiri!</p>
+ <a class="btn" href="#gallery">Lihat Nail Art ✨</a>
+</section>
+
+<section id="gallery">
+ <div class="section-title"><h2>Nail Art Gallery 💗</h2><p>Banyak inspirasi untuk mood yang berbeda!</p></div>
+ <div class="filters">
+  <button class="filter active" data-filter="all">All</button>
+  <button class="filter" data-filter="pink">Pink</button>
+  <button class="filter" data-filter="cute">Cute</button>
+  <button class="filter" data-filter="elegant">Elegant</button>
+  <button class="filter" data-filter="y2k">Y2K</button>
+  <button class="filter" data-filter="french">French</button>
+ </div>
+ <div class="grid" id="galleryGrid"></div>
+</section>
+
+<section id="creator">
+ <div class="section-title"><h2>🎀 Barbie Nail Creator</h2><p>Eksperimen dengan bentuk, warna, dan finishing.</p></div>
+ <div class="creator">
+  <div class="creator-grid">
+   <div>
+    <div class="control"><label>Warna utama</label><select id="baseColor"><option value="#f3a9c5">Barbie Pink</option><option value="#fffaf0">Ivory</option><option value="#e8c6ff">Lavender</option><option value="#9fe3e0">Mint</option><option value="#9fd3ff">Baby Blue</option><option value="#ffb3b3">Peach</option></select></div>
+    <div class="control"><label>Desain</label><select id="design"><option value="heart">Heart 💗</option><option value="french">French 🎀</option><option value="flower">Flower 🌸</option><option value="star">Star ✦</option><option value="bow">Bow 🎀</option><option value="glitter">Glitter ✨</option><option value="cherry">Cherry 🍒</option></select></div>
+    <div class="control"><label>Finishing</label><select id="finish"><option>Glossy</option><option>Shimmer</option><option>Milky</option></select></div>
+    <button class="btn" id="randomBtn">🎲 Random Design</button>
+   </div>
+   <div>
+    <div class="preview"><div class="hand" id="creatorHand"></div></div>
+    <div class="info" id="creatorInfo">Barbie Pink • Heart • Glossy</div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="about">
+ <div class="section-title"><h2>About Barbie Nails</h2><p>Little nail ideas, big pink energy 💕</p></div>
+ <div class="creator" style="text-align:center">
+  <p>Barbie Nails adalah mini website inspirasi nail art yang dibuat dengan tema pink dan ivory. Cocok untuk mencari ide desain kuku, bermain dengan kombinasi warna, dan mencoba gaya baru.</p>
+ </div>
+</section>
+</main>
+<footer>Made with 💗 • Barbie Nails © 2026</footer>
+
+<script>
+const designs=[
+ {name:"Barbie Heart",cat:["pink","cute"],cls:"design-heart",desc:"Pink manis dengan aksen hati"},
+ {name:"Pink French",cat:["pink","elegant","french"],cls:"design-french",desc:"French tip pink yang clean"},
+ {name:"Pink Glitter",cat:["pink","cute"],cls:"design-glitter",desc:"Glitter pink untuk extra sparkle"},
+ {name:"Cherry Girl",cat:["cute","pink"],cls:"design-cherry",desc:"Aksen cherry yang playful"},
+ {name:"Flower Garden",cat:["cute","pink"],cls:"design-flower",desc:"Bunga kecil yang dreamy"},
+ {name:"Lavender Star",cat:["cute","elegant"],cls:"design-star",desc:"Lavender dengan bintang elegan"},
+ {name:"Coquette Bow",cat:["pink","cute"],cls:"design-bow",desc:"Bow aesthetic yang super cute"},
+ {name:"Y2K Dream",cat:["y2k","cute"],cls:"design-y2k",desc:"Warna cerah ala Y2K"},
+ {name:"Cow Print",cat:["cute"],cls:"design-cow",desc:"Motif playful black & ivory"},
+ {name:"Coquette Pearl",cat:["pink","elegant"],cls:"design-coquette",desc:"Minimalis dengan vibe coquette"},
+ {name:"Ocean Shell",cat:["cute","elegant"],cls:"design-ocean",desc:"Nuansa biru dengan shell"},
+ {name:"Ivory Marble",cat:["elegant"],cls:"design-marble",desc:"Marble ivory yang classy"}
+];
+const grid=document.getElementById("galleryGrid");
+function nails(cls){return `<div class="hand">${Array(5).fill(0).map(()=>`<div class="nail ${cls}"></div>`).join("")}</div>`}
+function render(filter="all"){
+ grid.innerHTML=designs.filter(x=>filter==="all"||x.cat.includes(filter)).map((x,i)=>`
+ <article class="card">
+  <div class="art">${nails(x.cls)}</div>
+  <div class="card-body"><h3>${x.name}</h3><p>${x.desc}</p><div class="rating">★★★★★</div></div>
+ </article>`).join("");
+}
+render();
+document.querySelectorAll(".filter").forEach(b=>b.onclick=()=>{document.querySelectorAll(".filter").forEach(x=>x.classList.remove("active"));b.classList.add("active");render(b.dataset.filter)});
+
+const hand=document.getElementById("creatorHand"), base=document.getElementById("baseColor"), design=document.getElementById("design"), finish=document.getElementById("finish"), info=document.getElementById("creatorInfo");
+function updateCreator(){
+ hand.innerHTML=Array(5).fill(0).map(()=>`<div class="nail design-${design.value}"></div>`).join("");
+ const color=base.value;
+ hand.querySelectorAll(".nail").forEach(n=>{
+  if(design.value!=="french") n.style.background=color;
+  if(finish.value==="Shimmer") n.style.boxShadow="inset 0 0 18px rgba(255,255,255,.85),0 0 9px rgba(255,255,255,.55)";
+  if(finish.value==="Milky") n.style.opacity=".82";
+ });
+ info.textContent=`${base.options[base.selectedIndex].text} • ${design.options[design.selectedIndex].text} • ${finish.value}`;
+}
+[base,design,finish].forEach(x=>x.onchange=updateCreator);
+document.getElementById("randomBtn").onclick=()=>{
+ base.selectedIndex=Math.floor(Math.random()*base.options.length);
+ design.selectedIndex=Math.floor(Math.random()*design.options.length);
+ finish.selectedIndex=Math.floor(Math.random()*finish.options.length);
+ updateCreator();
+};
+updateCreator();
+</script>
+</body>
+</html>
